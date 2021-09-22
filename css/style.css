@@ -45,12 +45,13 @@ body {
   color: #000; }
 
 header.head {
-  background: url(../img/BG-Header.png) 0 0 no-repeat;
-  background-size: contain;
+  background: url(../img/BG-Header.png) center center no-repeat;
+  background-size: cover;
   overflow: hidden;
+  margin: 0 auto;
   min-height: 100%; }
   header.head .header-logo {
-    margin: 120px auto 159px;
+    margin: 96px auto 90px;
     width: 195px; }
   header.head .header-block {
     text-align: center; }
@@ -64,7 +65,7 @@ header.head {
       width: 105px;
       height: 2px;
       margin-top: 49px;
-      margin-bottom: 227px; }
+      margin-bottom: 134px; }
   header.head .header-button a.header-button__more {
     border: 2px solid white;
     color: #fff; }
@@ -95,7 +96,7 @@ header.head {
 
 nav.main .main-nav {
   margin: 0 0 120px 0;
-  padding: 0 0 20px 0; }
+  padding: 20px 0 20px 0; }
 
 section.about .about-text {
   text-align: center;
@@ -107,11 +108,13 @@ section.about .about-text {
 section.about .about-row {
   margin: 0 0 95px 0;
   overflow: hidden;
-  padding: 0 144px 0 177px; }
+  padding: 0 144px 0 177px;
+  display: flex; }
   section.about .about-row .about-col {
-    float: left;
-    width: 33.33333%;
+    width: 30%;
     text-align: center; }
+    section.about .about-row .about-col:nth-child(2) {
+      flex: 1 1 40%; }
     section.about .about-row .about-col .about-col__logo {
       margin: 0 auto 20px;
       display: flex;
@@ -129,8 +132,7 @@ section.about .about-row {
     section.about .about-row .about-col .about-col__text {
       line-height: 26px;
       font-weight: 300;
-      color: #868585;
-      padding: 0 40px 0 40px; }
+      color: #868585; }
 
 section.portfolio {
   background-color: #f3f3f3;
@@ -141,15 +143,16 @@ section.portfolio {
     overflow: hidden; }
     section.portfolio .port-row .port-col {
       float: left;
-      margin: 0 0 16px 20px;
       width: 47.027972028%; }
+      section.portfolio .port-row .port-col img {
+        width: 100%; }
       section.portfolio .port-row .port-col:nth-child(even) {
         margin: 0 20px 16px 27px; }
   section.portfolio .port-button {
     margin-top: 48px; }
 
 section.partners {
-  background: url(../img/bg-partners.png) left bottom no-repeat;
+  background: url(../img/bg-partners.png) center bottom no-repeat;
   padding: 101px 0 104px 0; }
   section.partners h2 {
     font-size: 30.4px;
@@ -161,7 +164,10 @@ section.partners {
     margin-bottom: 95px; }
   section.partners .partners_list {
     width: 48.9510%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     section.partners .partners_list img {
       margin-left: 109px; }
 

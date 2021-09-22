@@ -58,14 +58,15 @@ body {
 }
 
 header.head {
-  background: url(../img/BG-Header.png) 0 0 no-repeat;
-  background-size: contain;
+  background: url(../img/BG-Header.png) center center no-repeat;
+  background-size: cover;
   overflow: hidden;
+  margin: 0 auto;
+
   min-height: 100%;
 
-
   .header-logo {
-    margin: 120px auto 159px;
+    margin: 96px auto 90px;
     width: 195px;
 
     img {
@@ -88,7 +89,7 @@ header.head {
       width: 105px;
       height: 2px;
       margin-top: 49px;
-      margin-bottom: 227px;
+      margin-bottom: 134px;
     }
   }
 
@@ -138,7 +139,7 @@ header.head {
 nav.main {
   .main-nav {
     margin: 0 0 120px 0;
-    padding: 0 0 20px 0;
+    padding: 20px 0 20px 0;
 
     ul.main-nav__ul {
       li {
@@ -171,12 +172,15 @@ section.about {
     margin: 0 0 95px 0;
     overflow: hidden;
     padding: 0 144px 0 177px;
+    display: flex;
 
     .about-col {
-      float: left;
-      width: 33.33333%;
+      width: 30%;
       text-align: center;
-
+      &:nth-child(2)
+      {
+        flex: 1 1 40%;
+      }
       .about-col__logo {
         margin: 0 auto 20px;
         display: flex;
@@ -201,8 +205,7 @@ section.about {
         line-height: 26px;
         font-weight: 300;
         color: #868585;
-        padding: 0 40px 0 40px;
-      }
+       }
     }
 
 
@@ -234,10 +237,11 @@ section.portfolio {
 
     .port-col {
       float: left;
-      margin: 0 0 16px 20px;
+
       width: 538/1144*100%;
 
       img {
+        width: 100%;
       }
 
       &:nth-child(even) {
@@ -256,7 +260,7 @@ section.portfolio {
 
 
 section.partners {
-  background: url(../img/bg-partners.png) left bottom no-repeat;
+  background: url(../img/bg-partners.png) center bottom no-repeat;
   padding: 101px 0 104px 0;
 
   h2 {
@@ -272,7 +276,9 @@ section.partners {
   .partners_list {
     width: 48.9510%;
     margin: 0 auto;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       margin-left: 109px;
 
